@@ -1,9 +1,5 @@
 package kursWalut;
 
-import org.xml.sax.helpers.DefaultHandler;
-import java.io.InputStream;
-import java.net.URL;
-import java.util.List;
 import java.util.Scanner;
 import org.xml.sax.*;
 import javax.xml.parsers.*;
@@ -13,11 +9,17 @@ public class Main {
 
     public static void main (String[] args) throws IOException, ParserConfigurationException, SAXException {
 
+        String warunek;
+        Scanner scan = new Scanner(System.in);
+
         CreateParser newList = new CreateParser();
         newList.returnList();
 
-        GetValue.getIDYouHave();
-        GetValue.getYourValue();
-        GetValue.getIDYouWant();
+        do {
+            GetValue.getData();
+            System.out.println("Chcesz wprowadzic nowe wartosci? (T/N)");
+            warunek = scan.next();
+        }
+        while (warunek.equals("T"));
     }
 }

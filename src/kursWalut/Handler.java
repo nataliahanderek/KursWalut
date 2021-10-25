@@ -7,12 +7,14 @@ import org.xml.sax.helpers.DefaultHandler;
 
 public class Handler extends DefaultHandler {
 
-    private StringBuilder currentPozycja = new StringBuilder();
+    private final StringBuilder currentPozycja = new StringBuilder();
 
     List<Waluta> pozycja;
     Waluta currentWaluta;
 
     public List<Waluta> getPozycja() {
+        Waluta walutaPLN=new Waluta("zloty",1,"PLN",1);
+        pozycja.add(walutaPLN);
         return pozycja;
     }
 
@@ -56,7 +58,7 @@ public class Handler extends DefaultHandler {
         }
     }
 
-    public void characters(char ch[], int start, int length) {
+    public void characters(char[] ch, int start, int length) {
         currentPozycja.append(ch, start, length);
     }
 }

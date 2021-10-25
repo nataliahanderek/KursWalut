@@ -4,7 +4,16 @@ public class Waluta {
         private String nazwaWaluty;
         private int przelicznik;
         private String kodWaluty;
-        private float sredniKurs;
+        private double sredniKurs;
+
+        public Waluta(){};
+
+        public Waluta(String nowaNazwaWaluty, int nowyPrzelicznik, String nowyKodWaluty, double nowySredniKurs){
+            nazwaWaluty=nowaNazwaWaluty;
+            przelicznik=nowyPrzelicznik;
+            kodWaluty=nowyKodWaluty;
+            sredniKurs=nowySredniKurs;
+        }
 
         public String getNazwaWaluty() {
             return nazwaWaluty;
@@ -18,7 +27,7 @@ public class Waluta {
             return kodWaluty;
         }
 
-        public float getSredniKurs() {
+        public double getSredniKurs() {
             return sredniKurs;
         }
 

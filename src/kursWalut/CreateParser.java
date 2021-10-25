@@ -7,7 +7,6 @@ import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import java.io.IOException;
 import java.net.URL;
-import java.util.Collection;
 import java.util.List;
 
 
@@ -21,14 +20,7 @@ public class CreateParser {
         saxparser.parse(url.openStream(),handler);
 
         List<Waluta> pozycja = ((Handler) handler).getPozycja();
-/*
-        for(int i = 0; i < pozycja.size(); i++) {
-            System.out.println("nazwa_waluty: " + pozycja.get(i).getNazwaWaluty());
-            System.out.println("przelicznik: " + pozycja.get(i).getPrzelicznik());
-            System.out.println("kod_waluty: " + pozycja.get(i).getKodWaluty());
-            System.out.println("kurs_sredni: " + pozycja.get(i).getSredniKurs());
-            System.out.print("\n\n");
-        }
-*/      return pozycja;
+
+        return pozycja;
     }
 }
