@@ -1,26 +1,20 @@
+package kursWalut;
+
+import org.xml.sax.helpers.DefaultHandler;
+import java.io.InputStream;
+import java.net.URL;
+import java.util.List;
 import java.util.Scanner;
-
 import org.xml.sax.*;
-
 import javax.xml.parsers.*;
+import java.io.IOException;
 
 public class Main {
-    public static void main (String[] args) throws Exception {
 
-        // Tworzenie parsera
-        SAXParserFactory spf = SAXParserFactory.newInstance();
-        spf.setNamespaceAware(true);
-        SAXParser saxParser = spf.newSAXParser();
-        XMLReader parser = saxParser.getXMLReader();
+    public static void main (String[] args) throws IOException, ParserConfigurationException, SAXException {
 
-        // Tworzenie klasy Handler
-        Handler handler = new Handler();
-        parser.setContentHandler(handler);
-
-        // start parsowania dokumentu
-        parser.parse("https://www.nbp.pl/kursy/xml/lasta.xml");
-
-
+        CreateParser newList = new CreateParser();
+        newList.returnList();
 
 /*
         Scanner scan = new Scanner(System.in);

@@ -1,3 +1,5 @@
+package kursWalut;
+
 public class Convert {
     private float value;
 

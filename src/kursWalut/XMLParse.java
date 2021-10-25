@@ -1,3 +1,7 @@
+package kursWalut;
+
+import kursWalut.List;
+
 public class XMLParse {
     private Byte[] data;
 

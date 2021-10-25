@@ -1,3 +1,5 @@
+package kursWalut;
+
 public class GetValue {
     private String firstID;
     private String secondID;

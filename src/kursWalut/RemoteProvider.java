@@ -1,3 +1,5 @@
+package kursWalut;
+
 import javax.xml.parsers.*;
 import org.xml.sax.*;
 import org.xml.sax.helpers.*;
