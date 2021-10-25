@@ -16,11 +16,6 @@ public class GetValue {
         System.out.println("Podaj kod waluty, którą chcesz przeliczyć:");
         kodWaluty = scan.nextLine();
 
-/*      System.out.println("nazwa_waluty: " + ListObjects.getByID(kodWaluty).getNazwaWaluty());
-        System.out.println("przelicznik: " + ListObjects.getByID(kodWaluty).getPrzelicznik());
-        System.out.println("kod_waluty: " + ListObjects.getByID(kodWaluty).getKodWaluty());
-        System.out.println("kurs_sredni: " + ListObjects.getByID(kodWaluty).getSredniKurs() + "\n");
-*/
         Scanner scann = new Scanner(System.in);
         System.out.println("Podaj kod waluty, na którą chcesz przeliczyć " + kodWaluty + ":");
         kodWalutyWyjsciowy = scann.nextLine();
@@ -34,3 +29,9 @@ public class GetValue {
         System.out.println("Otrzymasz: " + wynik + " " + kodWalutyWyjsciowy);
     }
 }
+
+/*      System.out.println("nazwa_waluty: " + ListObjects.getByID(kodWaluty).getNazwaWaluty());
+        System.out.println("przelicznik: " + ListObjects.getByID(kodWaluty).getPrzelicznik());
+        System.out.println("kod_waluty: " + ListObjects.getByID(kodWaluty).getKodWaluty());
+        System.out.println("kurs_sredni: " + ListObjects.getByID(kodWaluty).getSredniKurs() + "\n");
+*/
