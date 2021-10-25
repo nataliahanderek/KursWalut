@@ -1,9 +1,10 @@
 package kursWalut;
 
 public class Convert {
-    private float value;
+    private double endValue;
 
-    public float getResult() {
+    public double getResult() {
+        double przelicznik;
         return 1;
     }
 }

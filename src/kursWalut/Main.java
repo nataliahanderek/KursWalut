@@ -16,18 +16,8 @@ public class Main {
         CreateParser newList = new CreateParser();
         newList.returnList();
 
-/*
-        Scanner scan = new Scanner(System.in);
-
-        System.out.println("Podaj kod waluty, którą chcesz przeliczyć:");
-        String kodWaluty = scan.nextLine();
-
-        System.out.println("Podaj wartość do przeliczenia:");
-        Double wartoscDoPrzeliczenia = scan.nextDouble();
-
-        System.out.println("Podaj kod waluty, na którą chcesz przeliczyć " + wartoscDoPrzeliczenia + " " + kodWaluty + ":");
-        String kodWalutyWyjsciowy = scan.nextLine();
- */
+        GetValue.getIDYouHave();
+        GetValue.getYourValue();
+        GetValue.getIDYouWant();
     }
-
 }
