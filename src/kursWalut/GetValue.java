@@ -15,14 +15,26 @@ public class GetValue {
         Scanner scan = new Scanner(System.in);
         System.out.println("Podaj kod waluty, którą chcesz przeliczyć:");
         kodWaluty = scan.nextLine();
+        while (ListObjects.getByID(kodWaluty) == null) {
+            System.out.println("Podaj ISTNIEJACY kod waluty, którą chcesz przeliczyć:");
+            kodWaluty = scan.nextLine();
+        }
 
         Scanner scann = new Scanner(System.in);
         System.out.println("Podaj kod waluty, na którą chcesz przeliczyć " + kodWaluty + ":");
         kodWalutyWyjsciowy = scann.nextLine();
+        while (ListObjects.getByID(kodWalutyWyjsciowy) == null) {
+            System.out.println("Podaj ISTNIEJACY kod waluty, na którą chcesz przeliczyć " + kodWaluty + ":");
+            kodWalutyWyjsciowy = scann.nextLine();
+        }
 
         System.out.println("Podaj wartość do przeliczenia z " + kodWaluty + " na " + kodWalutyWyjsciowy + ":");
         wartoscDoPrzeliczenia = scan.nextDouble();
-        System.out.print("\n");
+        while (wartoscDoPrzeliczenia < 0) {
+            System.out.println("Podaj DODATNIA wartość do przeliczenia z " + kodWaluty + " na " + kodWalutyWyjsciowy + ":");
+            wartoscDoPrzeliczenia = scan.nextDouble();
+            System.out.print("\n");
+        }
 
         new Convert(kodWaluty,kodWalutyWyjsciowy,wartoscDoPrzeliczenia);
         double wynik = Convert.getResult();

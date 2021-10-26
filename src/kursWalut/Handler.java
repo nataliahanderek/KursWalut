@@ -13,7 +13,7 @@ public class Handler extends DefaultHandler {
     Waluta currentWaluta;
 
     public List<Waluta> getPozycja() {
-        Waluta walutaPLN=new Waluta("zloty",1,"PLN",1);
+        Waluta walutaPLN = new Waluta("zloty",1,"PLN",1);
         pozycja.add(walutaPLN);
         return pozycja;
     }
@@ -42,7 +42,7 @@ public class Handler extends DefaultHandler {
         }
 
         if(qualifiedName.equalsIgnoreCase("przelicznik")) {
-           currentWaluta.setPrzelicznik(Integer.valueOf(String.valueOf(currentPozycja)));
+           currentWaluta.setPrzelicznik(Integer.parseInt(String.valueOf(currentPozycja)));
         }
 
         if(qualifiedName.equalsIgnoreCase("kod_waluty")) {
@@ -50,7 +50,7 @@ public class Handler extends DefaultHandler {
         }
 
         if(qualifiedName.equalsIgnoreCase("kurs_sredni")) {
-            currentWaluta.setSredniKurs(Float.valueOf(String.valueOf(currentPozycja).replace(',','.')));
+            currentWaluta.setSredniKurs(Float.parseFloat(String.valueOf(currentPozycja).replace(',','.')));
         }
 
         if(qualifiedName.equalsIgnoreCase("pozycja")) {
